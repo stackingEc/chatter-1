@@ -1,0 +1,36 @@
+{% block header %}
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Chat</title>
+        <base href="/">
+        {% load staticfiles %}
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+        <script src="{% static "js/jquery.min.js" %}"></script>
+        {#        <script src="{% static "js/angular.min.js" %}"></script>#}
+        <link rel="stylesheet" href="{% static "css/bootstrap/bootstrap.css" %}">
+        <script src="{% static "js/bootstrap/bootstrap.js" %}"></script>
+        <link rel="stylesheet" href="{% static "css/style.css" %}">
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300' rel='stylesheet'
+              type='text/css'>
+        <link rel='stylesheet prefetch'
+              href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css'>
+       <script src="{% static "js/ajax.js" %}"></script>
+
+
+    </head>
+    <body >
+{% endblock header %}
+
+{% block container %}{% endblock container %}
+
+
+{% block footer %}
+    {% block audiofile %}{% endblock audiofile %}
+    </body>
+    {% block chatjs %}{% endblock chatjs %}
+    </html>
+{% endblock footer %}

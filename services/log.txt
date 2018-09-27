@@ -1,0 +1,4 @@
+  Symbol        Date      Time    ...        Low   Close    Volume
+0   AAPL  2018-09-26  22:00:20    ...     219.76  220.42  19356161
+
+[1 rows x 8 columns]

@@ -1,0 +1,12 @@
+Django
+psycopg2
+Pillow
+selenium
+psycopg2-binary
+pandas
+pika
+
+
+
+
+
