@@ -1,4 +1,5 @@
 Install rabbitmq 
+Install Postgres database 
 Import database from the database folder all.sql
 Install requirements
 Install Python 3.5 or grater
