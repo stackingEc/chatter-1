@@ -1,12 +1,12 @@
-Install rabbitmq 
-Install Postgres database 
+>Install rabbitmq 
+>Install Postgres database 
 >Import database from the database folder all.sql
 >Install requirements
 >Install Python 3.5 or grater
 >pip3 install -r requirements.txt
 >python3 manage.py makemigrations
 >python3 manage.py migrate
->python3 manage.py
+>python3 manage.py runserver
 
 >In the folder websockets run the next command
 ```
@@ -24,10 +24,10 @@ python3 send.py
 python3 csv_file.py
 ```
 
-For the csv_file.py to get the data correctly of the company, have to put the root of the csv file, the file in the project 
+>For the csv_file.py to get the data correctly of the company, have to put the root of the csv file, the file in the project 
 is in the folder services  'aapl.us.csv'
 
-The url to the project 
+>The url to the project 
 ```
 http://127.0.0.1:8000/
 ```
