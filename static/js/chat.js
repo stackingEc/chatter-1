@@ -2,10 +2,12 @@ $("#profile-img").click(function () {
     $("#status-options").toggleClass("active");
 });
 
+
 $(".expand-button").click(function () {
     $("#profile").toggleClass("expanded");
     $("#contacts").toggleClass("expanded");
 });
+
 
 $("#status-options ul li").click(function () {
     $("#profile-img").removeClass();
@@ -38,7 +40,9 @@ var socket = io(url + ':' + port);
 
 $(function () {
     updateScroll();
+
 });
+
 
 $('form').submit(function () {
     var msg = $('#message');
@@ -47,6 +51,7 @@ $('form').submit(function () {
     if (msg.val().trim() !== "" && name.val().trim() !== "" && type.val().trim() !== "") {
         messenger = {
             'name': name.val().trim(),
+            'users': imagenes,
             'type': type.val().trim(),
             'message': msg.val().trim()
         };
@@ -55,13 +60,15 @@ $('form').submit(function () {
     msg.val('');
     return false;
 });
+
 socket.on('getMessage', function (messenger) {
     var date = new Date();
     var name = messenger.name;
+    var img = messenger.users;
     var msg = messenger.message;
-
     var result = check == name ? 'class="replies"' : 'class="sent"';
-    var icon = $('<li ' + result + '><img src="" alt="' + name + '"/><p>' + msg + '<br><small>' + date + '</small></br></p></li>');
+
+    var icon = $('<li ' + result + '><img src="/static/images/' + img + '" alt="' + name + '"/><p>' + msg + '<br><small>' + date + '</small></br></p></li>');
     $('#messenger').append(icon);
     updateScroll();
     var audio_result = check != name ? document.getElementById('audio1').play() : '';
@@ -72,6 +79,7 @@ function updateScroll() {
     var element = document.getElementById("messages-list");
     element.scrollTop = element.scrollHeight;
 }
+
 
 
 

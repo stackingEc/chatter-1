@@ -5,7 +5,7 @@ selenium
 psycopg2-binary
 pandas
 pika
-
+gunicorn
 
 
 

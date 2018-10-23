@@ -148,8 +148,10 @@
 
 {% block chatjs %}
     <script src="http://localhost:4000/socket.io/socket.io.js"></script>
+    {% load  user_tags %}
     <script>
         var check = {{ request.user.id }};
+        var imagenes = "{% finder request.user.id %}";
     </script>
     <script src="{% static "js/chat.js" %}"></script>
 {% endblock chatjs %}

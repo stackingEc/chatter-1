@@ -12,3 +12,10 @@ def user_image(data):
     result = '/static/images/'+usr.image
     return mark_safe(result)
 
+
+@register.simple_tag
+def finder(data):
+    usr = User.objects.get(id=data)
+    data = Profile.objects.get(user=usr.id)
+    result = data.image
+    return mark_safe(result)

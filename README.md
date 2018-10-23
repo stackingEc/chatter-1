@@ -43,3 +43,4 @@ Password  for both
 Iamtheone1?
 ```
 
+https://jee-appy.blogspot.com/2017/01/deply-django-with-nginx.html

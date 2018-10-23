@@ -36,12 +36,12 @@ class CreateUserForm(UserCreationForm):
             'username': forms.TextInput(attrs={'class': 'form-control',
                                                'required': True,
                                                'placeholder': 'User Name *'}),
-            'password1': forms.TextInput(attrs={'class': 'form-control',
-                                                'required': True,
-                                                'placeholder': 'Password *'}),
-            'password2': forms.TextInput(attrs={'class': 'form-control',
-                                                'required': True,
-                                                'placeholder': 'Confirm Password *'}),
+            'password1': forms.PasswordInput(attrs={'class': 'form-control',
+                                                    'required': True,
+                                                    'placeholder': 'Password *'}),
+            'password2': forms.PasswordInput(attrs={'class': 'form-control',
+                                                    'required': True,
+                                                    'placeholder': 'Confirm Password *'}),
             'email': forms.TextInput(attrs={'class': 'form-control',
                                             'required': True,
                                             'placeholder': 'info@su-techbian.com'}),
@@ -54,7 +54,7 @@ class CreateProfileForm(forms.Form):
         widget=forms.TextInput(
             attrs={
                 'class': 'form-control',
-                'placeholder': 'Número de Teléfono *',
+                'placeholder': 'Phone number *',
                 'required': True,
                 'max_length': 11
             }))
