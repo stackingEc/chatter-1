@@ -82,9 +82,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'chat',
-        'USER': 'root',
-        'PASSWORD': 'Admin14801612',
-        'HOST': 'localhost',
+        'USER': 'docker',
+        'PASSWORD': 'docker',
+        'HOST': 'db',
         'PORT': '5432',
     }
 }
