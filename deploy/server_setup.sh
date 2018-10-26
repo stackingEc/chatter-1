@@ -12,7 +12,8 @@ VIRTUALENV_BASE_PATH='/usr/local/virtualenvs'
 # Install Python, SQLite and pip
 apt-get update
 apt-get upgrade
-apt-get install -y python3.5 python3-dev sqlite python-pip supervisor nginx git postgresql postgresql-contrib
+apt-get install -y python3.5 python3-dev sqlite python-pip supervisor nginx git
+#postgresql postgresql-contrib
 
 # Upgrade pip to the latest version.
 pip install --upgrade pip
@@ -31,15 +32,15 @@ pip install -r $PROJECT_BASE_PATH/chatter/requirements.txt
 cd $PROJECT_BASE_PATH/chatter/
 
 # Setup Supervisor to run our uwsgi process.
-cp $PROJECT_BASE_PATH/chatter/deploy/supervisor_chatter.conf /etc/supervisor/conf.d/chatter_api.conf
+cp $PROJECT_BASE_PATH/chatter/deploy/supervisor_chatter.conf /etc/supervisor/conf.d/chatter.conf
 supervisorctl reread
 supervisorctl update
 supervisorctl restart chatter
 
 # Setup nginx to make our application accessible.
-cp $PROJECT_BASE_PATH/chatter/deploy/nginx_chatter.conf /etc/nginx/sites-available/chatter_api.conf
-rm /etc/nginx/sites-enabled/default
-ln -s /etc/nginx/sites-available/chatter_api.conf /etc/nginx/sites-enabled/chatter_api.conf
+cp $PROJECT_BASE_PATH/chatter/deploy/nginx_chatter.conf /etc/nginx/sites-available/chatter.conf
+#rm /etc/nginx/sites-enabled/default
+ln -s /etc/nginx/sites-available/chatter.conf /etc/nginx/sites-enabled/chatter.conf
 #systemctl restart nginx.service
 service nginx restart
 echo "DONE! :)"
