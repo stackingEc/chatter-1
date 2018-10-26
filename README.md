@@ -10,7 +10,7 @@
 
 >In the folder websockets run the next command
 ```
-node install --save-dev
+node install
 node index.js
 ```
 

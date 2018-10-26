@@ -3,12 +3,18 @@ version: '3'
 services:
   db:
     image: postgres
+    volumes:
+      - postgres-data:/var/lib/postgres/data
   web:
     build: .
-    command: bash -c "python3 manage.py makemigrations && python3 manage.py migrate && python3 manage.py runserver 0.0.0.0:800 && psql --command "CREATE USER docker WITH SUPERUSER PASSWORD 'docker';" &&\ createdb -O chat chat"
+    command: bash -c "python3 manage.py makemigrations && python3 manage.py migrate && python3 manage.py runserver 0.0.0.0:800 && psql --command  CREATE USER docker WITH SUPERUSER PASSWORD 'docker';" &&\ createdb -O chat chat"
     volumes:
       - .:/chat
     ports:
       - "8000:8000"
     depends_on:
       - db
+    links:
+      - db
+volumes:
+  postgres-data:
