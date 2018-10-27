@@ -40,7 +40,7 @@ supervisorctl restart chatter
 # Setup nginx to make our application accessible.
 cp $PROJECT_BASE_PATH/chatter/deploy/nginx_chatter.conf /etc/nginx/sites-available/chatter.conf
 #rm /etc/nginx/sites-enabled/default
-ln -s /etc/nginx/sites-available/chatter.conf /etc/nginx/sites-enabled/chatter.conf
+cp $PROJECT_BASE_PATH/chatter/deploy/nginx_chatter.conf /etc/nginx/sites-enabled/chatter.conf
 #systemctl restart nginx.service
 service nginx restart
 echo "DONE! :)"
