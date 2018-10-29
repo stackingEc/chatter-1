@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
+from django.conf.urls.static import static
 from history import views as history
 from profiles import views as profile
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 
 urlpatterns = [
@@ -31,3 +33,6 @@ urlpatterns = [
     url(r'^chat_history/$', history.history_by_type, name='chat_history'),
     url(r'^rabbit/$', history.queue_message, name='rabbit'),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
+
