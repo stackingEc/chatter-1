@@ -142,12 +142,12 @@
 
 {% block audiofile %}
 <div id="audio_player">
-    <audio id="audio1" src="../{% static "audio/message.mp3"%}"></audio>
+    <audio id="audio1" src="{% static "audio/message.mp3"%}"></audio>
     </div>
 {% endblock audiofile %}
 
 {% block chatjs %}
-    <script src="http://localhost:4000/socket.io/socket.io.js"></script>
+    <script src="http://www.su-techbian.com:4000/socket.io/socket.io.js"></script>
     {% load  user_tags %}
     <script>
         var check = {{ request.user.id }};

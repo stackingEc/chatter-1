@@ -3,9 +3,9 @@ var io = require('socket.io')(http);
 var XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 var xhttp = new XMLHttpRequest();
 var $ = require("jquery");
-var host = 'localhost';
+var host = 'www.su-techbian.com';
 var port = '8000';
-var url_base = "http://" + "127.0.0.1" + ":" + "8000";
+var url_base = "http://" + "www.su-techbian.com" + ":" + "8000";
 
 io.on('connection', function(socket) {
     socket.on('message', function(messenger) {

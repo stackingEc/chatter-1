@@ -43,8 +43,8 @@ http://127.0.0.1:8000/
 
 please use the following users
 ```
-dave@gmail.com
-crack@live.com
+juan@gmail.com
+anthony@live.com
 ```
 
 Password  for both

@@ -1,15 +1,15 @@
 upstream chat {
-        server 0.0.0.0:8000;
+        server www.su-techbian.com:8000;
 }
 
 server {
         listen 8000;
-        server_name 192.168.100.9;
+        server_name www.su-techbian.com;
         access_log /var/log/nginx/chat.log;
         error_log /var/log/nginx/chat.error.log;
 
         location / {
-                proxy_pass http://192.168.100.9;
+                proxy_pass http://www.su-techbian.com;
                 proxy_redirect  off;
 
                 proxy_set_header        Host            $http_host;
