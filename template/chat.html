@@ -142,7 +142,7 @@
 
 {% block audiofile %}
 <div id="audio_player">
-    <audio id="audio1" src="{% static "audio/message.mp3"%}"></audio>
+    <audio id="audio1" src="../{% static "audio/message.mp3"%}"></audio>
     </div>
 {% endblock audiofile %}
 
@@ -153,5 +153,5 @@
         var check = {{ request.user.id }};
         var imagenes = "{% finder request.user.id %}";
     </script>
-    <script src="{% static "js/chat.js" %}"></script>
+    <script src="../{% static "js/chat.js" %}"></script>
 {% endblock chatjs %}
