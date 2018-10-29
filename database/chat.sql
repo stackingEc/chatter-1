@@ -5,8 +5,6 @@
 -- Dumped from database version 9.6.10
 -- Dumped by pg_dump version 9.6.10
 
--- Started on 2018-09-27 13:32:11 -05
-
 SET statement_timeout = 0;
 SET lock_timeout = 0;
 SET idle_in_transaction_session_timeout = 0;
@@ -18,7 +16,6 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- TOC entry 1 (class 3079 OID 12393)
 -- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
 --
 
@@ -26,8 +23,6 @@ CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 
 
 --
--- TOC entry 2325 (class 0 OID 0)
--- Dependencies: 1
 -- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
 --
 
@@ -39,7 +34,6 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- TOC entry 192 (class 1259 OID 53188)
 -- Name: auth_group; Type: TABLE; Schema: public; Owner: root
 --
 
@@ -52,7 +46,6 @@ CREATE TABLE public.auth_group (
 ALTER TABLE public.auth_group OWNER TO root;
 
 --
--- TOC entry 191 (class 1259 OID 53186)
 -- Name: auth_group_id_seq; Type: SEQUENCE; Schema: public; Owner: root
 --
 
@@ -67,8 +60,6 @@ CREATE SEQUENCE public.auth_group_id_seq
 ALTER TABLE public.auth_group_id_seq OWNER TO root;
 
 --
--- TOC entry 2326 (class 0 OID 0)
--- Dependencies: 191
 -- Name: auth_group_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: root
 --
 
@@ -76,7 +67,6 @@ ALTER SEQUENCE public.auth_group_id_seq OWNED BY public.auth_group.id;
 
 
 --
--- TOC entry 194 (class 1259 OID 53198)
 -- Name: auth_group_permissions; Type: TABLE; Schema: public; Owner: root
 --
 
@@ -90,7 +80,6 @@ CREATE TABLE public.auth_group_permissions (
 ALTER TABLE public.auth_group_permissions OWNER TO root;
 
 --
--- TOC entry 193 (class 1259 OID 53196)
 -- Name: auth_group_permissions_id_seq; Type: SEQUENCE; Schema: public; Owner: root
 --
 
@@ -105,8 +94,6 @@ CREATE SEQUENCE public.auth_group_permissions_id_seq
 ALTER TABLE public.auth_group_permissions_id_seq OWNER TO root;
 
 --
--- TOC entry 2327 (class 0 OID 0)
--- Dependencies: 193
 -- Name: auth_group_permissions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: root
 --
 
@@ -114,7 +101,6 @@ ALTER SEQUENCE public.auth_group_permissions_id_seq OWNED BY public.auth_group_p
 
 
 --
--- TOC entry 190 (class 1259 OID 53180)
 -- Name: auth_permission; Type: TABLE; Schema: public; Owner: root
 --
 
@@ -129,7 +115,6 @@ CREATE TABLE public.auth_permission (
 ALTER TABLE public.auth_permission OWNER TO root;
 
 --
--- TOC entry 189 (class 1259 OID 53178)
 -- Name: auth_permission_id_seq; Type: SEQUENCE; Schema: public; Owner: root
 --
 
@@ -144,8 +129,6 @@ CREATE SEQUENCE public.auth_permission_id_seq
 ALTER TABLE public.auth_permission_id_seq OWNER TO root;
 
 --
--- TOC entry 2328 (class 0 OID 0)
--- Dependencies: 189
 -- Name: auth_permission_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: root
 --
 
@@ -153,7 +136,6 @@ ALTER SEQUENCE public.auth_permission_id_seq OWNED BY public.auth_permission.id;
 
 
 --
--- TOC entry 196 (class 1259 OID 53206)
 -- Name: auth_user; Type: TABLE; Schema: public; Owner: root
 --
 
@@ -175,7 +157,6 @@ CREATE TABLE public.auth_user (
 ALTER TABLE public.auth_user OWNER TO root;
 
 --
--- TOC entry 198 (class 1259 OID 53216)
 -- Name: auth_user_groups; Type: TABLE; Schema: public; Owner: root
 --
 
@@ -189,7 +170,6 @@ CREATE TABLE public.auth_user_groups (
 ALTER TABLE public.auth_user_groups OWNER TO root;
 
 --
--- TOC entry 197 (class 1259 OID 53214)
 -- Name: auth_user_groups_id_seq; Type: SEQUENCE; Schema: public; Owner: root
 --
 
@@ -204,8 +184,6 @@ CREATE SEQUENCE public.auth_user_groups_id_seq
 ALTER TABLE public.auth_user_groups_id_seq OWNER TO root;
 
 --
--- TOC entry 2329 (class 0 OID 0)
--- Dependencies: 197
 -- Name: auth_user_groups_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: root
 --
 
@@ -213,7 +191,6 @@ ALTER SEQUENCE public.auth_user_groups_id_seq OWNED BY public.auth_user_groups.i
 
 
 --
--- TOC entry 195 (class 1259 OID 53204)
 -- Name: auth_user_id_seq; Type: SEQUENCE; Schema: public; Owner: root
 --
 
@@ -228,8 +205,6 @@ CREATE SEQUENCE public.auth_user_id_seq
 ALTER TABLE public.auth_user_id_seq OWNER TO root;
 
 --
--- TOC entry 2330 (class 0 OID 0)
--- Dependencies: 195
 -- Name: auth_user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: root
 --
 
@@ -237,7 +212,6 @@ ALTER SEQUENCE public.auth_user_id_seq OWNED BY public.auth_user.id;
 
 
 --
--- TOC entry 200 (class 1259 OID 53224)
 -- Name: auth_user_user_permissions; Type: TABLE; Schema: public; Owner: root
 --
 
@@ -251,7 +225,6 @@ CREATE TABLE public.auth_user_user_permissions (
 ALTER TABLE public.auth_user_user_permissions OWNER TO root;
 
 --
--- TOC entry 199 (class 1259 OID 53222)
 -- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE; Schema: public; Owner: root
 --
 
@@ -266,8 +239,6 @@ CREATE SEQUENCE public.auth_user_user_permissions_id_seq
 ALTER TABLE public.auth_user_user_permissions_id_seq OWNER TO root;
 
 --
--- TOC entry 2331 (class 0 OID 0)
--- Dependencies: 199
 -- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: root
 --
 
@@ -275,7 +246,6 @@ ALTER SEQUENCE public.auth_user_user_permissions_id_seq OWNED BY public.auth_use
 
 
 --
--- TOC entry 202 (class 1259 OID 53284)
 -- Name: django_admin_log; Type: TABLE; Schema: public; Owner: root
 --
 
@@ -295,7 +265,6 @@ CREATE TABLE public.django_admin_log (
 ALTER TABLE public.django_admin_log OWNER TO root;
 
 --
--- TOC entry 201 (class 1259 OID 53282)
 -- Name: django_admin_log_id_seq; Type: SEQUENCE; Schema: public; Owner: root
 --
 
@@ -310,8 +279,6 @@ CREATE SEQUENCE public.django_admin_log_id_seq
 ALTER TABLE public.django_admin_log_id_seq OWNER TO root;
 
 --
--- TOC entry 2332 (class 0 OID 0)
--- Dependencies: 201
 -- Name: django_admin_log_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: root
 --
 
@@ -319,7 +286,6 @@ ALTER SEQUENCE public.django_admin_log_id_seq OWNED BY public.django_admin_log.i
 
 
 --
--- TOC entry 188 (class 1259 OID 53170)
 -- Name: django_content_type; Type: TABLE; Schema: public; Owner: root
 --
 
@@ -333,7 +299,6 @@ CREATE TABLE public.django_content_type (
 ALTER TABLE public.django_content_type OWNER TO root;
 
 --
--- TOC entry 187 (class 1259 OID 53168)
 -- Name: django_content_type_id_seq; Type: SEQUENCE; Schema: public; Owner: root
 --
 
@@ -348,8 +313,6 @@ CREATE SEQUENCE public.django_content_type_id_seq
 ALTER TABLE public.django_content_type_id_seq OWNER TO root;
 
 --
--- TOC entry 2333 (class 0 OID 0)
--- Dependencies: 187
 -- Name: django_content_type_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: root
 --
 
@@ -357,7 +320,6 @@ ALTER SEQUENCE public.django_content_type_id_seq OWNED BY public.django_content_
 
 
 --
--- TOC entry 186 (class 1259 OID 53159)
 -- Name: django_migrations; Type: TABLE; Schema: public; Owner: root
 --
 
@@ -372,7 +334,6 @@ CREATE TABLE public.django_migrations (
 ALTER TABLE public.django_migrations OWNER TO root;
 
 --
--- TOC entry 185 (class 1259 OID 53157)
 -- Name: django_migrations_id_seq; Type: SEQUENCE; Schema: public; Owner: root
 --
 
@@ -387,8 +348,6 @@ CREATE SEQUENCE public.django_migrations_id_seq
 ALTER TABLE public.django_migrations_id_seq OWNER TO root;
 
 --
--- TOC entry 2334 (class 0 OID 0)
--- Dependencies: 185
 -- Name: django_migrations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: root
 --
 
@@ -396,7 +355,6 @@ ALTER SEQUENCE public.django_migrations_id_seq OWNED BY public.django_migrations
 
 
 --
--- TOC entry 203 (class 1259 OID 53312)
 -- Name: django_session; Type: TABLE; Schema: public; Owner: root
 --
 
@@ -410,7 +368,6 @@ CREATE TABLE public.django_session (
 ALTER TABLE public.django_session OWNER TO root;
 
 --
--- TOC entry 207 (class 1259 OID 53339)
 -- Name: history_chathistory; Type: TABLE; Schema: public; Owner: root
 --
 
@@ -426,7 +383,6 @@ CREATE TABLE public.history_chathistory (
 ALTER TABLE public.history_chathistory OWNER TO root;
 
 --
--- TOC entry 206 (class 1259 OID 53337)
 -- Name: history_chathistory_id_seq; Type: SEQUENCE; Schema: public; Owner: root
 --
 
@@ -441,8 +397,6 @@ CREATE SEQUENCE public.history_chathistory_id_seq
 ALTER TABLE public.history_chathistory_id_seq OWNER TO root;
 
 --
--- TOC entry 2335 (class 0 OID 0)
--- Dependencies: 206
 -- Name: history_chathistory_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: root
 --
 
@@ -450,7 +404,6 @@ ALTER SEQUENCE public.history_chathistory_id_seq OWNED BY public.history_chathis
 
 
 --
--- TOC entry 209 (class 1259 OID 53347)
 -- Name: history_groups; Type: TABLE; Schema: public; Owner: root
 --
 
@@ -465,7 +418,6 @@ CREATE TABLE public.history_groups (
 ALTER TABLE public.history_groups OWNER TO root;
 
 --
--- TOC entry 208 (class 1259 OID 53345)
 -- Name: history_groups_id_seq; Type: SEQUENCE; Schema: public; Owner: root
 --
 
@@ -480,8 +432,6 @@ CREATE SEQUENCE public.history_groups_id_seq
 ALTER TABLE public.history_groups_id_seq OWNER TO root;
 
 --
--- TOC entry 2336 (class 0 OID 0)
--- Dependencies: 208
 -- Name: history_groups_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: root
 --
 
@@ -489,7 +439,6 @@ ALTER SEQUENCE public.history_groups_id_seq OWNED BY public.history_groups.id;
 
 
 --
--- TOC entry 211 (class 1259 OID 53355)
 -- Name: history_personalmessage; Type: TABLE; Schema: public; Owner: root
 --
 
@@ -505,7 +454,6 @@ CREATE TABLE public.history_personalmessage (
 ALTER TABLE public.history_personalmessage OWNER TO root;
 
 --
--- TOC entry 210 (class 1259 OID 53353)
 -- Name: history_personalmessage_id_seq; Type: SEQUENCE; Schema: public; Owner: root
 --
 
@@ -520,8 +468,6 @@ CREATE SEQUENCE public.history_personalmessage_id_seq
 ALTER TABLE public.history_personalmessage_id_seq OWNER TO root;
 
 --
--- TOC entry 2337 (class 0 OID 0)
--- Dependencies: 210
 -- Name: history_personalmessage_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: root
 --
 
@@ -529,7 +475,6 @@ ALTER SEQUENCE public.history_personalmessage_id_seq OWNED BY public.history_per
 
 
 --
--- TOC entry 205 (class 1259 OID 53325)
 -- Name: profiles_profile; Type: TABLE; Schema: public; Owner: root
 --
 
@@ -546,7 +491,6 @@ CREATE TABLE public.profiles_profile (
 ALTER TABLE public.profiles_profile OWNER TO root;
 
 --
--- TOC entry 204 (class 1259 OID 53323)
 -- Name: profiles_profile_id_seq; Type: SEQUENCE; Schema: public; Owner: root
 --
 
@@ -561,8 +505,6 @@ CREATE SEQUENCE public.profiles_profile_id_seq
 ALTER TABLE public.profiles_profile_id_seq OWNER TO root;
 
 --
--- TOC entry 2338 (class 0 OID 0)
--- Dependencies: 204
 -- Name: profiles_profile_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: root
 --
 
@@ -570,7 +512,6 @@ ALTER SEQUENCE public.profiles_profile_id_seq OWNED BY public.profiles_profile.i
 
 
 --
--- TOC entry 2089 (class 2604 OID 53191)
 -- Name: auth_group id; Type: DEFAULT; Schema: public; Owner: root
 --
 
@@ -578,7 +519,6 @@ ALTER TABLE ONLY public.auth_group ALTER COLUMN id SET DEFAULT nextval('public.a
 
 
 --
--- TOC entry 2090 (class 2604 OID 53201)
 -- Name: auth_group_permissions id; Type: DEFAULT; Schema: public; Owner: root
 --
 
@@ -586,7 +526,6 @@ ALTER TABLE ONLY public.auth_group_permissions ALTER COLUMN id SET DEFAULT nextv
 
 
 --
--- TOC entry 2088 (class 2604 OID 53183)
 -- Name: auth_permission id; Type: DEFAULT; Schema: public; Owner: root
 --
 
@@ -594,7 +533,6 @@ ALTER TABLE ONLY public.auth_permission ALTER COLUMN id SET DEFAULT nextval('pub
 
 
 --
--- TOC entry 2091 (class 2604 OID 53209)
 -- Name: auth_user id; Type: DEFAULT; Schema: public; Owner: root
 --
 
@@ -602,7 +540,6 @@ ALTER TABLE ONLY public.auth_user ALTER COLUMN id SET DEFAULT nextval('public.au
 
 
 --
--- TOC entry 2092 (class 2604 OID 53219)
 -- Name: auth_user_groups id; Type: DEFAULT; Schema: public; Owner: root
 --
 
@@ -610,7 +547,6 @@ ALTER TABLE ONLY public.auth_user_groups ALTER COLUMN id SET DEFAULT nextval('pu
 
 
 --
--- TOC entry 2093 (class 2604 OID 53227)
 -- Name: auth_user_user_permissions id; Type: DEFAULT; Schema: public; Owner: root
 --
 
@@ -618,7 +554,6 @@ ALTER TABLE ONLY public.auth_user_user_permissions ALTER COLUMN id SET DEFAULT n
 
 
 --
--- TOC entry 2094 (class 2604 OID 53287)
 -- Name: django_admin_log id; Type: DEFAULT; Schema: public; Owner: root
 --
 
@@ -626,7 +561,6 @@ ALTER TABLE ONLY public.django_admin_log ALTER COLUMN id SET DEFAULT nextval('pu
 
 
 --
--- TOC entry 2087 (class 2604 OID 53173)
 -- Name: django_content_type id; Type: DEFAULT; Schema: public; Owner: root
 --
 
@@ -634,7 +568,6 @@ ALTER TABLE ONLY public.django_content_type ALTER COLUMN id SET DEFAULT nextval(
 
 
 --
--- TOC entry 2086 (class 2604 OID 53162)
 -- Name: django_migrations id; Type: DEFAULT; Schema: public; Owner: root
 --
 
@@ -642,7 +575,6 @@ ALTER TABLE ONLY public.django_migrations ALTER COLUMN id SET DEFAULT nextval('p
 
 
 --
--- TOC entry 2097 (class 2604 OID 53342)
 -- Name: history_chathistory id; Type: DEFAULT; Schema: public; Owner: root
 --
 
@@ -650,7 +582,6 @@ ALTER TABLE ONLY public.history_chathistory ALTER COLUMN id SET DEFAULT nextval(
 
 
 --
--- TOC entry 2098 (class 2604 OID 53350)
 -- Name: history_groups id; Type: DEFAULT; Schema: public; Owner: root
 --
 
@@ -658,7 +589,6 @@ ALTER TABLE ONLY public.history_groups ALTER COLUMN id SET DEFAULT nextval('publ
 
 
 --
--- TOC entry 2099 (class 2604 OID 53358)
 -- Name: history_personalmessage id; Type: DEFAULT; Schema: public; Owner: root
 --
 
@@ -666,7 +596,6 @@ ALTER TABLE ONLY public.history_personalmessage ALTER COLUMN id SET DEFAULT next
 
 
 --
--- TOC entry 2096 (class 2604 OID 53328)
 -- Name: profiles_profile id; Type: DEFAULT; Schema: public; Owner: root
 --
 
@@ -674,8 +603,6 @@ ALTER TABLE ONLY public.profiles_profile ALTER COLUMN id SET DEFAULT nextval('pu
 
 
 --
--- TOC entry 2298 (class 0 OID 53188)
--- Dependencies: 192
 -- Data for Name: auth_group; Type: TABLE DATA; Schema: public; Owner: root
 --
 
@@ -684,8 +611,6 @@ COPY public.auth_group (id, name) FROM stdin;
 
 
 --
--- TOC entry 2339 (class 0 OID 0)
--- Dependencies: 191
 -- Name: auth_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: root
 --
 
@@ -693,8 +618,6 @@ SELECT pg_catalog.setval('public.auth_group_id_seq', 1, false);
 
 
 --
--- TOC entry 2300 (class 0 OID 53198)
--- Dependencies: 194
 -- Data for Name: auth_group_permissions; Type: TABLE DATA; Schema: public; Owner: root
 --
 
@@ -703,8 +626,6 @@ COPY public.auth_group_permissions (id, group_id, permission_id) FROM stdin;
 
 
 --
--- TOC entry 2340 (class 0 OID 0)
--- Dependencies: 193
 -- Name: auth_group_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: root
 --
 
@@ -712,8 +633,6 @@ SELECT pg_catalog.setval('public.auth_group_permissions_id_seq', 1, false);
 
 
 --
--- TOC entry 2296 (class 0 OID 53180)
--- Dependencies: 190
 -- Data for Name: auth_permission; Type: TABLE DATA; Schema: public; Owner: root
 --
 
@@ -762,8 +681,6 @@ COPY public.auth_permission (id, name, content_type_id, codename) FROM stdin;
 
 
 --
--- TOC entry 2341 (class 0 OID 0)
--- Dependencies: 189
 -- Name: auth_permission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: root
 --
 
@@ -771,22 +688,20 @@ SELECT pg_catalog.setval('public.auth_permission_id_seq', 40, true);
 
 
 --
--- TOC entry 2302 (class 0 OID 53206)
--- Dependencies: 196
 -- Data for Name: auth_user; Type: TABLE DATA; Schema: public; Owner: root
 --
 
 COPY public.auth_user (id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) FROM stdin;
-1	pbkdf2_sha256$120000$aqIK8HjD9st0$peqjopfjZk/EpurBe2fG8iWGMTshGeOQYVENkJcS6J4=	\N	f	kim			yachayx@gmail.com	f	t	2018-09-27 12:29:04.228949-05
-3	pbkdf2_sha256$120000$RewWlZ26wGSw$Yk383NvNR5CevjJS7ekQrafrZHaoJ8NQ2rZIq3Obzd0=	2018-09-27 12:34:10.524534-05	f	crack			crack@live.com	f	t	2018-09-27 12:33:55.967165-05
-4	pbkdf2_sha256$120000$QZv3gcV0WtN4$v1HDizAGUB8NODCI7Y09gY4fIMzn8ZoA4F/GjeituhE=	2018-09-27 12:41:43.542197-05	t	andrews			rsilva2014@live.com	t	t	2018-09-27 12:41:20.876188-05
-2	pbkdf2_sha256$120000$83dMmmdmCvOi$KFSOclEd2tUIJ7Jiv76vIh+3neKIpQSAqXbUPjDt8Zo=	2018-09-27 13:24:23.63213-05	f	dave			dave@gmail.com	f	t	2018-09-27 12:30:38.409309-05
+5	pbkdf2_sha256$120000$NcEGsxgauxVJ$mZBj/9WaBXnX1JpAW+0LlYH/vbrZrG//qvWFyQnAMr0=	2018-10-22 10:10:23.518394-05	f	amc			mcordova@nadhat.com	f	t	2018-10-22 10:10:17.562122-05
+4	pbkdf2_sha256$120000$QZv3gcV0WtN4$v1HDizAGUB8NODCI7Y09gY4fIMzn8ZoA4F/GjeituhE=	2018-10-22 10:49:52.309348-05	t	andrews			rsilva2014@live.com	t	t	2018-09-27 12:41:20.876188-05
+1	pbkdf2_sha256$120000$aqIK8HjD9st0$peqjopfjZk/EpurBe2fG8iWGMTshGeOQYVENkJcS6J4=	2018-10-22 10:50:08.426704-05	f	kim			yachayx@gmail.com	f	t	2018-09-27 12:29:04.228949-05
+2	pbkdf2_sha256$120000$83dMmmdmCvOi$KFSOclEd2tUIJ7Jiv76vIh+3neKIpQSAqXbUPjDt8Zo=	2018-10-22 23:26:44.479525-05	f	dave			dave@gmail.com	f	t	2018-09-27 12:30:38.409309-05
+3	pbkdf2_sha256$120000$RewWlZ26wGSw$Yk383NvNR5CevjJS7ekQrafrZHaoJ8NQ2rZIq3Obzd0=	2018-10-22 23:34:53.786241-05	f	crack			crack@live.com	f	t	2018-09-27 12:33:55.967165-05
+6	pbkdf2_sha256$120000$PGjjrF75XPlK$mBFL/lkEaqd5mUFb9ny6twRpv0AOmpyx6n6037vw8Ic=	\N	f	melany			melany@tech.com	f	t	2018-10-25 14:39:00.934493-05
 \.
 
 
 --
--- TOC entry 2304 (class 0 OID 53216)
--- Dependencies: 198
 -- Data for Name: auth_user_groups; Type: TABLE DATA; Schema: public; Owner: root
 --
 
@@ -795,8 +710,6 @@ COPY public.auth_user_groups (id, user_id, group_id) FROM stdin;
 
 
 --
--- TOC entry 2342 (class 0 OID 0)
--- Dependencies: 197
 -- Name: auth_user_groups_id_seq; Type: SEQUENCE SET; Schema: public; Owner: root
 --
 
@@ -804,17 +717,13 @@ SELECT pg_catalog.setval('public.auth_user_groups_id_seq', 1, false);
 
 
 --
--- TOC entry 2343 (class 0 OID 0)
--- Dependencies: 195
 -- Name: auth_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: root
 --
 
-SELECT pg_catalog.setval('public.auth_user_id_seq', 4, true);
+SELECT pg_catalog.setval('public.auth_user_id_seq', 6, true);
 
 
 --
--- TOC entry 2306 (class 0 OID 53224)
--- Dependencies: 200
 -- Data for Name: auth_user_user_permissions; Type: TABLE DATA; Schema: public; Owner: root
 --
 
@@ -823,8 +732,6 @@ COPY public.auth_user_user_permissions (id, user_id, permission_id) FROM stdin;
 
 
 --
--- TOC entry 2344 (class 0 OID 0)
--- Dependencies: 199
 -- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: root
 --
 
@@ -832,8 +739,6 @@ SELECT pg_catalog.setval('public.auth_user_user_permissions_id_seq', 1, false);
 
 
 --
--- TOC entry 2308 (class 0 OID 53284)
--- Dependencies: 202
 -- Data for Name: django_admin_log; Type: TABLE DATA; Schema: public; Owner: root
 --
 
@@ -842,8 +747,6 @@ COPY public.django_admin_log (id, action_time, object_id, object_repr, action_fl
 
 
 --
--- TOC entry 2345 (class 0 OID 0)
--- Dependencies: 201
 -- Name: django_admin_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: root
 --
 
@@ -851,8 +754,6 @@ SELECT pg_catalog.setval('public.django_admin_log_id_seq', 1, false);
 
 
 --
--- TOC entry 2294 (class 0 OID 53170)
--- Dependencies: 188
 -- Data for Name: django_content_type; Type: TABLE DATA; Schema: public; Owner: root
 --
 
@@ -871,8 +772,6 @@ COPY public.django_content_type (id, app_label, model) FROM stdin;
 
 
 --
--- TOC entry 2346 (class 0 OID 0)
--- Dependencies: 187
 -- Name: django_content_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: root
 --
 
@@ -880,8 +779,6 @@ SELECT pg_catalog.setval('public.django_content_type_id_seq', 10, true);
 
 
 --
--- TOC entry 2292 (class 0 OID 53159)
--- Dependencies: 186
 -- Data for Name: django_migrations; Type: TABLE DATA; Schema: public; Owner: root
 --
 
@@ -917,8 +814,6 @@ COPY public.django_migrations (id, app, name, applied) FROM stdin;
 
 
 --
--- TOC entry 2347 (class 0 OID 0)
--- Dependencies: 185
 -- Name: django_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: root
 --
 
@@ -926,38 +821,119 @@ SELECT pg_catalog.setval('public.django_migrations_id_seq', 27, true);
 
 
 --
--- TOC entry 2309 (class 0 OID 53312)
--- Dependencies: 203
 -- Data for Name: django_session; Type: TABLE DATA; Schema: public; Owner: root
 --
 
 COPY public.django_session (session_key, session_data, expire_date) FROM stdin;
-a7qqxrqhxxf82zwl49yc88214492m3r4	YjMzMjk4M2JmOTIxMDE1YzRjYjQ3ZjA2N2U0M2IxNTUxMTE5MWQ3Zjp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI2Yjc4YTI3MTUwMTJjMjFjZDJmZmRmZTBlYmNlNjZkMWVhYWE5MWQzIn0=	2018-10-11 13:24:23.649916-05
+a7qqxrqhxxf82zwl49yc88214492m3r4	ZjAxNmNlNDYyNzNiODExYjgzNmI2ZjYzZDViNGI0NzJhOTI4NGQxMzp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9oYXNoIjoiNmI3OGEyNzE1MDEyYzIxY2QyZmZkZmUwZWJjZTY2ZDFlYWFhOTFkMyIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=	2018-10-11 17:23:15.078414-05
+c4bb4wmbstjqnq5dtbqxsoamn2ti5kh2	YjM5NTZiODVhNzg1NjlkZDdiNWE3ZjE0NjMyNTQzMTY0ZTU0OGFlMzp7Il9hdXRoX3VzZXJfaWQiOiIzIiwiX2F1dGhfdXNlcl9oYXNoIjoiYjFiZDQ0YjFlZWU3NDc3YjE1OTMxZjY3NTNiM2U2OGZkOTA1MzI1YiIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=	2018-10-11 17:23:57.774904-05
+actfg31r4feccvpeg21eortxdcn27u25	ODgwOWYxODdiY2Q1NjY1OTJjYWRiNTMxN2RmNDgzZGM0ZTVjMjI3MTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiNmM2OTAyNzc1ODAyNmNmY2JmYjRiMjE1MjAyMzk4ODgyM2MyMWZlYSIsIl9hdXRoX3VzZXJfaWQiOiI1In0=	2018-11-05 10:10:23.551543-05
+1w839omwqcw8njuq08iqfzd7cbp9xcic	MmJjMWViNWEzMmFjZDVmOGNjZjM3MWViNTVmMWJmZWIzNzBjMzMyMDp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiNmI3OGEyNzE1MDEyYzIxY2QyZmZkZmUwZWJjZTY2ZDFlYWFhOTFkMyIsIl9hdXRoX3VzZXJfaWQiOiIyIn0=	2018-11-05 10:52:37.279997-05
+xt4lzxfctsqavr2dnod1oqgyifr42wxn	YjMzMjk4M2JmOTIxMDE1YzRjYjQ3ZjA2N2U0M2IxNTUxMTE5MWQ3Zjp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI2Yjc4YTI3MTUwMTJjMjFjZDJmZmRmZTBlYmNlNjZkMWVhYWE5MWQzIn0=	2018-11-05 11:12:48.177056-05
+1e4ump4pbilwpl5fabl0dsfkn1nxj6eo	YjMzMjk4M2JmOTIxMDE1YzRjYjQ3ZjA2N2U0M2IxNTUxMTE5MWQ3Zjp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI2Yjc4YTI3MTUwMTJjMjFjZDJmZmRmZTBlYmNlNjZkMWVhYWE5MWQzIn0=	2018-11-05 11:14:31.139896-05
+rozx0j0zrbtks4zqvew67jzm0s8mbi29	YjMzMjk4M2JmOTIxMDE1YzRjYjQ3ZjA2N2U0M2IxNTUxMTE5MWQ3Zjp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI2Yjc4YTI3MTUwMTJjMjFjZDJmZmRmZTBlYmNlNjZkMWVhYWE5MWQzIn0=	2018-11-05 11:31:32.161345-05
+ulxhduragcv8dm026q2wtcru4zjwu8q3	ZjAxNmNlNDYyNzNiODExYjgzNmI2ZjYzZDViNGI0NzJhOTI4NGQxMzp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9oYXNoIjoiNmI3OGEyNzE1MDEyYzIxY2QyZmZkZmUwZWJjZTY2ZDFlYWFhOTFkMyIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=	2018-11-05 19:54:37.531949-05
+mi4e5tglricwnuxsj5xza5k36jduyvzr	ZjAxNmNlNDYyNzNiODExYjgzNmI2ZjYzZDViNGI0NzJhOTI4NGQxMzp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9oYXNoIjoiNmI3OGEyNzE1MDEyYzIxY2QyZmZkZmUwZWJjZTY2ZDFlYWFhOTFkMyIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=	2018-11-05 20:16:27.153788-05
+kgent9rcc03dr17f2q0wl2roef8az5fc	NmMxYzA2M2MwYWNiMmUxZGJkNzg4NTI2MDZiOTU3ZDQ0MDU2MWUzYzp7Il9hdXRoX3VzZXJfaGFzaCI6IjZiNzhhMjcxNTAxMmMyMWNkMmZmZGZlMGViY2U2NmQxZWFhYTkxZDMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIyIn0=	2018-11-05 20:39:41.264181-05
+7clvyynsykqnye268ymijnnxshuff0r4	MmJjMWViNWEzMmFjZDVmOGNjZjM3MWViNTVmMWJmZWIzNzBjMzMyMDp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiNmI3OGEyNzE1MDEyYzIxY2QyZmZkZmUwZWJjZTY2ZDFlYWFhOTFkMyIsIl9hdXRoX3VzZXJfaWQiOiIyIn0=	2018-11-05 21:25:17.161768-05
+oc9ex55vm8xhwfbegcmdp76prsiaqqa5	MmJjMWViNWEzMmFjZDVmOGNjZjM3MWViNTVmMWJmZWIzNzBjMzMyMDp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiNmI3OGEyNzE1MDEyYzIxY2QyZmZkZmUwZWJjZTY2ZDFlYWFhOTFkMyIsIl9hdXRoX3VzZXJfaWQiOiIyIn0=	2018-11-05 23:26:44.530553-05
+xd9ge0ljle2k8a9tfmy4ulnhft3g06o0	NjgzNmJhOWEyNjhiZjY4MmNmMTFhMmIzYzI4ZTYwYjU0NWMxYWEwZTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiYjFiZDQ0YjFlZWU3NDc3YjE1OTMxZjY3NTNiM2U2OGZkOTA1MzI1YiIsIl9hdXRoX3VzZXJfaWQiOiIzIn0=	2018-11-05 23:34:53.832657-05
 \.
 
 
 --
--- TOC entry 2313 (class 0 OID 53339)
--- Dependencies: 207
 -- Data for Name: history_chathistory; Type: TABLE DATA; Schema: public; Owner: root
 --
 
 COPY public.history_chathistory (id, message, date, group_id, user_id) FROM stdin;
+1	hello	2018-09-27 17:20:00-05	1	2
+2	hi	2018-09-27 17:20:00-05	1	3
+3	Hi	2018-09-27 17:20:00-05	1	3
+4	hello	2018-09-27 17:20:00-05	1	2
+5	hi	2018-09-27 17:20:00-05	1	2
+56	333	2018-10-22 22:04:00-05	1	2
+7	AAA	2018-10-22 11:05:00-05	1	2
+8	hehe	2018-10-22 19:55:00-05	1	2
+9	hey	2018-10-22 19:55:00-05	1	2
+10	lala	2018-10-22 20:31:00-05	1	2
+11	ll	2018-10-22 20:33:00-05	1	2
+12	asdd	2018-10-22 20:35:00-05	1	2
+13	aaa	2018-10-22 20:38:00-05	1	2
+14	vvv	2018-10-22 20:40:00-05	1	2
+15	vvv	2018-10-22 20:43:00-05	1	2
+16	asdd	2018-10-22 20:43:00-05	1	2
+17	sdf4	2018-10-22 20:47:00-05	1	2
+18	asdd	2018-10-22 20:51:00-05	1	2
+19	sdfff	2018-10-22 20:54:00-05	1	2
+20	sddd	2018-10-22 20:55:00-05	1	2
+21	asd	2018-10-22 20:55:00-05	1	2
+22	serio	2018-10-22 20:55:00-05	1	2
+23	asss	2018-10-22 20:55:00-05	1	2
+24	asd	2018-10-22 20:59:00-05	1	2
+25	asd	2018-10-22 20:59:00-05	1	2
+26	ddd	2018-10-22 20:59:00-05	1	2
+27	asd	2018-10-22 20:59:00-05	1	2
+28	12233	2018-10-22 20:59:00-05	1	2
+29	asd	2018-10-22 20:59:00-05	1	2
+30	235555	2018-10-22 20:59:00-05	1	2
+31	SD	2018-10-22 21:24:00-05	1	2
+32	sddd	2018-10-22 21:24:00-05	1	2
+33	asd	2018-10-22 21:26:00-05	1	2
+34	sddd	2018-10-22 21:26:00-05	1	2
+35	saddd	2018-10-22 21:32:00-05	1	2
+36	333	2018-10-22 21:57:00-05	1	2
+37	6666666	2018-10-22 21:57:00-05	1	2
+38	6666666	2018-10-22 22:04:00-05	1	2
+39	777	2018-10-22 22:04:00-05	1	2
+40	111	2018-10-22 22:04:00-05	1	2
+41	xxxx	2018-10-22 22:04:00-05	1	2
+42	sddd	2018-10-22 22:04:00-05	1	2
+43	aaaa	2018-10-22 22:04:00-05	1	2
+44	aaaaa	2018-10-22 22:04:00-05	1	2
+45	777	2018-10-22 22:04:00-05	1	2
+46	223	2018-10-22 22:04:00-05	1	2
+47	145	2018-10-22 22:04:00-05	1	2
+48	posilca	2018-10-22 22:04:00-05	1	2
+49	asddd	2018-10-22 22:04:00-05	1	2
+50	sss	2018-10-22 22:04:00-05	1	2
+51	LL	2018-10-22 22:04:00-05	1	2
+52	ASD	2018-10-22 22:04:00-05	1	2
+53	sd12	2018-10-22 22:04:00-05	1	2
+54	as123	2018-10-22 22:04:00-05	1	2
+55	123tre	2018-10-22 22:04:00-05	1	2
+57	da45	2018-10-22 22:04:00-05	1	2
+58	das123	2018-10-22 22:04:00-05	1	2
+59	ds23	2018-10-22 22:04:00-05	1	2
+60	asd345	2018-10-22 22:04:00-05	1	2
+61	asdd	2018-10-22 23:24:00-05	1	2
+62	asd123?	2018-10-22 23:24:00-05	1	2
+63	sda23	2018-10-22 23:24:00-05	1	2
+64	daaa54	2018-10-22 23:24:00-05	1	2
+65	asd3	2018-10-22 23:24:00-05	1	2
+66	asd	2018-10-22 23:24:00-05	1	2
+67	lala	2018-10-22 23:24:00-05	1	3
+68	asd	2018-10-22 23:24:00-05	1	2
+69	sda	2018-10-22 23:24:00-05	1	3
+70	why	2018-10-22 23:24:00-05	1	2
+71	lslsl	2018-10-22 23:24:00-05	1	3
+72	lla	2018-10-22 23:24:00-05	1	2
+73	ok	2018-10-22 23:24:00-05	1	3
+74	ll	2018-10-22 23:24:00-05	1	2
+75	ll	2018-10-22 23:24:00-05	1	3
+76	;;7	2018-10-22 23:24:00-05	1	2
+77	123	2018-10-22 23:24:00-05	1	3
+78	bn,	2018-10-22 23:24:00-05	1	3
 \.
 
 
 --
--- TOC entry 2348 (class 0 OID 0)
--- Dependencies: 206
 -- Name: history_chathistory_id_seq; Type: SEQUENCE SET; Schema: public; Owner: root
 --
 
-SELECT pg_catalog.setval('public.history_chathistory_id_seq', 1, false);
+SELECT pg_catalog.setval('public.history_chathistory_id_seq', 78, true);
 
 
 --
--- TOC entry 2315 (class 0 OID 53347)
--- Dependencies: 209
 -- Data for Name: history_groups; Type: TABLE DATA; Schema: public; Owner: root
 --
 
@@ -967,8 +943,6 @@ COPY public.history_groups (id, name, type, date) FROM stdin;
 
 
 --
--- TOC entry 2349 (class 0 OID 0)
--- Dependencies: 208
 -- Name: history_groups_id_seq; Type: SEQUENCE SET; Schema: public; Owner: root
 --
 
@@ -976,8 +950,6 @@ SELECT pg_catalog.setval('public.history_groups_id_seq', 1, false);
 
 
 --
--- TOC entry 2317 (class 0 OID 53355)
--- Dependencies: 211
 -- Data for Name: history_personalmessage; Type: TABLE DATA; Schema: public; Owner: root
 --
 
@@ -986,8 +958,6 @@ COPY public.history_personalmessage (id, message, date, profile_reciver_id, user
 
 
 --
--- TOC entry 2350 (class 0 OID 0)
--- Dependencies: 210
 -- Name: history_personalmessage_id_seq; Type: SEQUENCE SET; Schema: public; Owner: root
 --
 
@@ -995,28 +965,25 @@ SELECT pg_catalog.setval('public.history_personalmessage_id_seq', 1, false);
 
 
 --
--- TOC entry 2311 (class 0 OID 53325)
--- Dependencies: 205
 -- Data for Name: profiles_profile; Type: TABLE DATA; Schema: public; Owner: root
 --
 
 COPY public.profiles_profile (id, number, date_of_birth, date_inserted, image, user_id) FROM stdin;
 1	096816232	1978-06-01 05:00:00-05	2018-09-27 12:29:00-05	my.gif	2
 3	0968196666	2004-01-01 07:00:00-05	2018-09-27 12:33:00-05	my.jpeg	3
+4	0968196867	2018-06-02 19:00:00-05	2018-10-22 10:08:00-05	5.jpg	5
+5	0968196867	2018-10-01 08:00:00-05	2018-10-25 14:36:00-05	5.jpg	6
 \.
 
 
 --
--- TOC entry 2351 (class 0 OID 0)
--- Dependencies: 204
 -- Name: profiles_profile_id_seq; Type: SEQUENCE SET; Schema: public; Owner: root
 --
 
-SELECT pg_catalog.setval('public.profiles_profile_id_seq', 3, true);
+SELECT pg_catalog.setval('public.profiles_profile_id_seq', 5, true);
 
 
 --
--- TOC entry 2113 (class 2606 OID 53195)
 -- Name: auth_group auth_group_name_key; Type: CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1025,7 +992,6 @@ ALTER TABLE ONLY public.auth_group
 
 
 --
--- TOC entry 2118 (class 2606 OID 53250)
 -- Name: auth_group_permissions auth_group_permissions_group_id_permission_id_0cd325b0_uniq; Type: CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1034,7 +1000,6 @@ ALTER TABLE ONLY public.auth_group_permissions
 
 
 --
--- TOC entry 2121 (class 2606 OID 53203)
 -- Name: auth_group_permissions auth_group_permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1043,7 +1008,6 @@ ALTER TABLE ONLY public.auth_group_permissions
 
 
 --
--- TOC entry 2115 (class 2606 OID 53193)
 -- Name: auth_group auth_group_pkey; Type: CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1052,7 +1016,6 @@ ALTER TABLE ONLY public.auth_group
 
 
 --
--- TOC entry 2108 (class 2606 OID 53236)
 -- Name: auth_permission auth_permission_content_type_id_codename_01ab375a_uniq; Type: CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1061,7 +1024,6 @@ ALTER TABLE ONLY public.auth_permission
 
 
 --
--- TOC entry 2110 (class 2606 OID 53185)
 -- Name: auth_permission auth_permission_pkey; Type: CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1070,7 +1032,6 @@ ALTER TABLE ONLY public.auth_permission
 
 
 --
--- TOC entry 2129 (class 2606 OID 53221)
 -- Name: auth_user_groups auth_user_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1079,7 +1040,6 @@ ALTER TABLE ONLY public.auth_user_groups
 
 
 --
--- TOC entry 2132 (class 2606 OID 53265)
 -- Name: auth_user_groups auth_user_groups_user_id_group_id_94350c0c_uniq; Type: CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1088,7 +1048,6 @@ ALTER TABLE ONLY public.auth_user_groups
 
 
 --
--- TOC entry 2123 (class 2606 OID 53211)
 -- Name: auth_user auth_user_pkey; Type: CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1097,7 +1056,6 @@ ALTER TABLE ONLY public.auth_user
 
 
 --
--- TOC entry 2135 (class 2606 OID 53229)
 -- Name: auth_user_user_permissions auth_user_user_permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1106,7 +1064,6 @@ ALTER TABLE ONLY public.auth_user_user_permissions
 
 
 --
--- TOC entry 2138 (class 2606 OID 53279)
 -- Name: auth_user_user_permissions auth_user_user_permissions_user_id_permission_id_14a6b632_uniq; Type: CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1115,7 +1072,6 @@ ALTER TABLE ONLY public.auth_user_user_permissions
 
 
 --
--- TOC entry 2126 (class 2606 OID 53307)
 -- Name: auth_user auth_user_username_key; Type: CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1124,7 +1080,6 @@ ALTER TABLE ONLY public.auth_user
 
 
 --
--- TOC entry 2141 (class 2606 OID 53293)
 -- Name: django_admin_log django_admin_log_pkey; Type: CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1133,7 +1088,6 @@ ALTER TABLE ONLY public.django_admin_log
 
 
 --
--- TOC entry 2103 (class 2606 OID 53177)
 -- Name: django_content_type django_content_type_app_label_model_76bd3d3b_uniq; Type: CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1142,7 +1096,6 @@ ALTER TABLE ONLY public.django_content_type
 
 
 --
--- TOC entry 2105 (class 2606 OID 53175)
 -- Name: django_content_type django_content_type_pkey; Type: CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1151,7 +1104,6 @@ ALTER TABLE ONLY public.django_content_type
 
 
 --
--- TOC entry 2101 (class 2606 OID 53167)
 -- Name: django_migrations django_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1160,7 +1112,6 @@ ALTER TABLE ONLY public.django_migrations
 
 
 --
--- TOC entry 2145 (class 2606 OID 53319)
 -- Name: django_session django_session_pkey; Type: CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1169,7 +1120,6 @@ ALTER TABLE ONLY public.django_session
 
 
 --
--- TOC entry 2152 (class 2606 OID 53344)
 -- Name: history_chathistory history_chathistory_pkey; Type: CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1178,7 +1128,6 @@ ALTER TABLE ONLY public.history_chathistory
 
 
 --
--- TOC entry 2155 (class 2606 OID 53352)
 -- Name: history_groups history_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1187,7 +1136,6 @@ ALTER TABLE ONLY public.history_groups
 
 
 --
--- TOC entry 2157 (class 2606 OID 53363)
 -- Name: history_personalmessage history_personalmessage_pkey; Type: CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1196,7 +1144,6 @@ ALTER TABLE ONLY public.history_personalmessage
 
 
 --
--- TOC entry 2148 (class 2606 OID 53330)
 -- Name: profiles_profile profiles_profile_pkey; Type: CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1205,7 +1152,6 @@ ALTER TABLE ONLY public.profiles_profile
 
 
 --
--- TOC entry 2111 (class 1259 OID 53238)
 -- Name: auth_group_name_a6ea08ec_like; Type: INDEX; Schema: public; Owner: root
 --
 
@@ -1213,7 +1159,6 @@ CREATE INDEX auth_group_name_a6ea08ec_like ON public.auth_group USING btree (nam
 
 
 --
--- TOC entry 2116 (class 1259 OID 53251)
 -- Name: auth_group_permissions_group_id_b120cbf9; Type: INDEX; Schema: public; Owner: root
 --
 
@@ -1221,7 +1166,6 @@ CREATE INDEX auth_group_permissions_group_id_b120cbf9 ON public.auth_group_permi
 
 
 --
--- TOC entry 2119 (class 1259 OID 53252)
 -- Name: auth_group_permissions_permission_id_84c5c92e; Type: INDEX; Schema: public; Owner: root
 --
 
@@ -1229,7 +1173,6 @@ CREATE INDEX auth_group_permissions_permission_id_84c5c92e ON public.auth_group_
 
 
 --
--- TOC entry 2106 (class 1259 OID 53237)
 -- Name: auth_permission_content_type_id_2f476e4b; Type: INDEX; Schema: public; Owner: root
 --
 
@@ -1237,7 +1180,6 @@ CREATE INDEX auth_permission_content_type_id_2f476e4b ON public.auth_permission 
 
 
 --
--- TOC entry 2127 (class 1259 OID 53267)
 -- Name: auth_user_groups_group_id_97559544; Type: INDEX; Schema: public; Owner: root
 --
 
@@ -1245,7 +1187,6 @@ CREATE INDEX auth_user_groups_group_id_97559544 ON public.auth_user_groups USING
 
 
 --
--- TOC entry 2130 (class 1259 OID 53266)
 -- Name: auth_user_groups_user_id_6a12ed8b; Type: INDEX; Schema: public; Owner: root
 --
 
@@ -1253,7 +1194,6 @@ CREATE INDEX auth_user_groups_user_id_6a12ed8b ON public.auth_user_groups USING 
 
 
 --
--- TOC entry 2133 (class 1259 OID 53281)
 -- Name: auth_user_user_permissions_permission_id_1fbb5f2c; Type: INDEX; Schema: public; Owner: root
 --
 
@@ -1261,7 +1201,6 @@ CREATE INDEX auth_user_user_permissions_permission_id_1fbb5f2c ON public.auth_us
 
 
 --
--- TOC entry 2136 (class 1259 OID 53280)
 -- Name: auth_user_user_permissions_user_id_a95ead1b; Type: INDEX; Schema: public; Owner: root
 --
 
@@ -1269,7 +1208,6 @@ CREATE INDEX auth_user_user_permissions_user_id_a95ead1b ON public.auth_user_use
 
 
 --
--- TOC entry 2124 (class 1259 OID 53308)
 -- Name: auth_user_username_6821ab7c_like; Type: INDEX; Schema: public; Owner: root
 --
 
@@ -1277,7 +1215,6 @@ CREATE INDEX auth_user_username_6821ab7c_like ON public.auth_user USING btree (u
 
 
 --
--- TOC entry 2139 (class 1259 OID 53304)
 -- Name: django_admin_log_content_type_id_c4bce8eb; Type: INDEX; Schema: public; Owner: root
 --
 
@@ -1285,7 +1222,6 @@ CREATE INDEX django_admin_log_content_type_id_c4bce8eb ON public.django_admin_lo
 
 
 --
--- TOC entry 2142 (class 1259 OID 53305)
 -- Name: django_admin_log_user_id_c564eba6; Type: INDEX; Schema: public; Owner: root
 --
 
@@ -1293,7 +1229,6 @@ CREATE INDEX django_admin_log_user_id_c564eba6 ON public.django_admin_log USING 
 
 
 --
--- TOC entry 2143 (class 1259 OID 53321)
 -- Name: django_session_expire_date_a5c62663; Type: INDEX; Schema: public; Owner: root
 --
 
@@ -1301,7 +1236,6 @@ CREATE INDEX django_session_expire_date_a5c62663 ON public.django_session USING 
 
 
 --
--- TOC entry 2146 (class 1259 OID 53320)
 -- Name: django_session_session_key_c0390e0f_like; Type: INDEX; Schema: public; Owner: root
 --
 
@@ -1309,7 +1243,6 @@ CREATE INDEX django_session_session_key_c0390e0f_like ON public.django_session U
 
 
 --
--- TOC entry 2150 (class 1259 OID 53376)
 -- Name: history_chathistory_group_id_f18baa15; Type: INDEX; Schema: public; Owner: root
 --
 
@@ -1317,7 +1250,6 @@ CREATE INDEX history_chathistory_group_id_f18baa15 ON public.history_chathistory
 
 
 --
--- TOC entry 2153 (class 1259 OID 53382)
 -- Name: history_chathistory_user_id_43d0e70a; Type: INDEX; Schema: public; Owner: root
 --
 
@@ -1325,7 +1257,6 @@ CREATE INDEX history_chathistory_user_id_43d0e70a ON public.history_chathistory 
 
 
 --
--- TOC entry 2158 (class 1259 OID 53374)
 -- Name: history_personalmessage_profile_reciver_id_c1919511; Type: INDEX; Schema: public; Owner: root
 --
 
@@ -1333,7 +1264,6 @@ CREATE INDEX history_personalmessage_profile_reciver_id_c1919511 ON public.histo
 
 
 --
--- TOC entry 2159 (class 1259 OID 53375)
 -- Name: history_personalmessage_user_sender_id_59da1eaf; Type: INDEX; Schema: public; Owner: root
 --
 
@@ -1341,7 +1271,6 @@ CREATE INDEX history_personalmessage_user_sender_id_59da1eaf ON public.history_p
 
 
 --
--- TOC entry 2149 (class 1259 OID 53336)
 -- Name: profiles_profile_user_id_a3e81f91; Type: INDEX; Schema: public; Owner: root
 --
 
@@ -1349,7 +1278,6 @@ CREATE INDEX profiles_profile_user_id_a3e81f91 ON public.profiles_profile USING 
 
 
 --
--- TOC entry 2162 (class 2606 OID 53244)
 -- Name: auth_group_permissions auth_group_permissio_permission_id_84c5c92e_fk_auth_perm; Type: FK CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1358,7 +1286,6 @@ ALTER TABLE ONLY public.auth_group_permissions
 
 
 --
--- TOC entry 2161 (class 2606 OID 53239)
 -- Name: auth_group_permissions auth_group_permissions_group_id_b120cbf9_fk_auth_group_id; Type: FK CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1367,7 +1294,6 @@ ALTER TABLE ONLY public.auth_group_permissions
 
 
 --
--- TOC entry 2160 (class 2606 OID 53230)
 -- Name: auth_permission auth_permission_content_type_id_2f476e4b_fk_django_co; Type: FK CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1376,7 +1302,6 @@ ALTER TABLE ONLY public.auth_permission
 
 
 --
--- TOC entry 2164 (class 2606 OID 53259)
 -- Name: auth_user_groups auth_user_groups_group_id_97559544_fk_auth_group_id; Type: FK CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1385,7 +1310,6 @@ ALTER TABLE ONLY public.auth_user_groups
 
 
 --
--- TOC entry 2163 (class 2606 OID 53254)
 -- Name: auth_user_groups auth_user_groups_user_id_6a12ed8b_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1394,7 +1318,6 @@ ALTER TABLE ONLY public.auth_user_groups
 
 
 --
--- TOC entry 2166 (class 2606 OID 53273)
 -- Name: auth_user_user_permissions auth_user_user_permi_permission_id_1fbb5f2c_fk_auth_perm; Type: FK CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1403,7 +1326,6 @@ ALTER TABLE ONLY public.auth_user_user_permissions
 
 
 --
--- TOC entry 2165 (class 2606 OID 53268)
 -- Name: auth_user_user_permissions auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1412,7 +1334,6 @@ ALTER TABLE ONLY public.auth_user_user_permissions
 
 
 --
--- TOC entry 2167 (class 2606 OID 53294)
 -- Name: django_admin_log django_admin_log_content_type_id_c4bce8eb_fk_django_co; Type: FK CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1421,7 +1342,6 @@ ALTER TABLE ONLY public.django_admin_log
 
 
 --
--- TOC entry 2168 (class 2606 OID 53299)
 -- Name: django_admin_log django_admin_log_user_id_c564eba6_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1430,7 +1350,6 @@ ALTER TABLE ONLY public.django_admin_log
 
 
 --
--- TOC entry 2170 (class 2606 OID 53377)
 -- Name: history_chathistory history_chathistory_group_id_f18baa15_fk_history_groups_id; Type: FK CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1439,7 +1358,6 @@ ALTER TABLE ONLY public.history_chathistory
 
 
 --
--- TOC entry 2171 (class 2606 OID 53383)
 -- Name: history_chathistory history_chathistory_user_id_43d0e70a_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1448,7 +1366,6 @@ ALTER TABLE ONLY public.history_chathistory
 
 
 --
--- TOC entry 2172 (class 2606 OID 53364)
 -- Name: history_personalmessage history_personalmess_profile_reciver_id_c1919511_fk_profiles_; Type: FK CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1457,7 +1374,6 @@ ALTER TABLE ONLY public.history_personalmessage
 
 
 --
--- TOC entry 2173 (class 2606 OID 53369)
 -- Name: history_personalmessage history_personalmessage_user_sender_id_59da1eaf_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: root
 --
 
@@ -1466,15 +1382,12 @@ ALTER TABLE ONLY public.history_personalmessage
 
 
 --
--- TOC entry 2169 (class 2606 OID 53331)
 -- Name: profiles_profile profiles_profile_user_id_a3e81f91_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: root
 --
 
 ALTER TABLE ONLY public.profiles_profile
     ADD CONSTRAINT profiles_profile_user_id_a3e81f91_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES public.auth_user(id) DEFERRABLE INITIALLY DEFERRED;
 
-
--- Completed on 2018-09-27 13:32:11 -05
 
 --
 -- PostgreSQL database dump complete
