@@ -1,6 +1,15 @@
 >Install rabbitmq 
 >Install Postgres database 
 >Import database from the database folder all.sql
+
+
+>Grant permission to the user to do CRUD Operations
+```
+psql mydatabase -c "GRANT ALL ON ALL TABLES IN SCHEMA public to admin;"
+psql mydatabase -c "GRANT ALL ON ALL SEQUENCES IN SCHEMA public to admin;"
+psql mydatabase -c "GRANT ALL ON ALL FUNCTIONS IN SCHEMA public to admin;"
+```
+
 >Install requirements
 >Install Python 3.5 or grater
 >pip3 install -r requirements.txt
