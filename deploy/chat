@@ -30,6 +30,6 @@ server {
         }
 
         location /static/ {
-                root /home/andrews/chatter/static;
+                root /usr/local/apps/chatter/static;
         }
 }

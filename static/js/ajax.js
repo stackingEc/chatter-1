@@ -1,4 +1,4 @@
-var baseUrl = "http://" + "127.0.0.1" + ":" + "8000";
+var baseUrl = "http://" + "www.su-techbian.com" + ":" + "8000";
 
 $(document).ready(function () {
     $('.content').hide();

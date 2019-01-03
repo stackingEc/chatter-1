@@ -34,7 +34,7 @@ $("#status-options ul li").click(function () {
 });
 
 
-var url = 'localhost';
+var url = 'www.su-techbian.com';
 var port = '4000';
 var socket = io(url + ':' + port);
 

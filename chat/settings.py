@@ -40,10 +40,11 @@ INSTALLED_APPS = [
     'history',
     'profiles',
     'profiles.templatetags',
-
+    'corsheaders',
 ]
-
+CORS_ORIGIN_ALLOW_ALL = True
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -81,9 +82,9 @@ WSGI_APPLICATION = 'chat.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'chat_dev',
-        'USER': 'admin',
-        'PASSWORD': 'Admin14801612',
+        'NAME': 'chat',
+        'USER': 'aasc',
+        'PASSWORD': '123Balance5',
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -127,7 +128,7 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT =  'static/'
+#STATIC_ROOT =  'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
@@ -135,3 +136,6 @@ UPLOAD_DIRS = os.path.join(BASE_DIR, 'static/tmp')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
+CORS_ORIGIN_WHITELIST = (
+    'http//:www.su-techbian.com:8000',
+)
