@@ -153,5 +153,5 @@
         var check = {{ request.user.id }};
         var imagenes = "{% finder request.user.id %}";
     </script>
-    <script src="../{% static "js/chat.js" %}"></script>
+    <script src="{% static "js/chat.js" %}"></script>
 {% endblock chatjs %}
